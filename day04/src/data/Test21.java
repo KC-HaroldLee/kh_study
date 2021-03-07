@@ -9,7 +9,7 @@ public class Test21 {
 		
 		//입력
 		int price = 85000;
-		int cardPresA = 30; //나중에 다른 할인 카드를 추가하기 좋을 거 같다.
+		int cardPresA = 30; // 나중에 다른 할인 카드를 추가하기 좋을 거 같다. B, C ...
 		
 		//계산
 		int dcRate = cardPresA; //카드가 추가된다면 바뀔 부분
