@@ -19,6 +19,7 @@ public class Test02 {
 
 		Scanner sc = new Scanner(System.in);
 		direction = sc.nextInt();
+		sc.close();
 		switch(direction) {
 		
 		case 2:
