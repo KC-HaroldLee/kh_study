@@ -59,3 +59,5 @@ public class Test06 {
 		System.out.println(target + "의 운임 요금은 " + fee + "원입니다.");
 	}
 }
+	
+}
