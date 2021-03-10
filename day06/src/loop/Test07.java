@@ -1,30 +1,23 @@
 package loop;
+
 import java.lang.*;
+
 public class Test07 {
-	public static void main(String[] args)  {
-        // 저는 욕심이 별로 없으니까 30일동안 첫날은 1원만 주시고
-        // 그 다음날부터는 전날의 2배를 주시면 됩니다.
-        // 노인이 받게될 일자별 금액과 마지막 잔고를 출력하세요.
-        // (40일 동안 받으면 얼마인지도 계산해보세요)
-        
-        int money = 1;
-        int total = 0;
-        
-        for(int i = 1; i <= 30; i++) {
-            System.out.println(i + " 일차 : " + money + "원");
-            money *= 2;
-            total += money;
-        }
-        System.out.println("총 금액 : " + total + "원");
-        
-        long money1 = 1;
-        long total1 = 0;
-        
-        for(int i = 1; i <= 40; i++) {
-            System.out.println(i + " 일차 : " + money1 + "원");
-            money1 *= 2;
-            total1 += money1;
-        }
-        System.out.println("총 금액 : " + total1 + "원");
-    }
+	public static void main(String[] args) {
+		// [2] 한달(30일)간의 다이어트 계획을 세우고 있습니다.
+		// 푸시업을 차근차근 늘려가며 매일 할 계획이며, 첫날은 10개만 하고 둘째날부터 전날보다 3개씩 개수를 늘려가며 할 예정입니다.
+		// 한달동안 일자별로 하게되는 푸시업 개수를 출력하세요.
+		// (가능하면 한달동안 하게되는 총 푸시업 개수도 출력하세요)
+
+		int pushUpCount = 10;
+		int pushUpTotal = 0;
+		for (int i = 0; i < 30; i += 1) { // 첫날~30일까지
+			System.out.println(i + 1 + "일차에 할 푸쉬업 횟수는 " + pushUpCount + "입니다.");
+			pushUpTotal = pushUpTotal + pushUpCount;
+			pushUpCount += 3; // 일단 1일차 하고. 다음날 3씩 증가
+
+		}
+		System.out.println("30일까지 모두 " + pushUpTotal + "개의 푸쉬업을 하였습니다.");
+		// 계산이 두들기다가 엑셀로 검산해보니...더 빠르구나
+	}
 }
