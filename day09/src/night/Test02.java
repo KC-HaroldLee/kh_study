@@ -20,7 +20,8 @@ public class Test02 {
 			temp = data[k];
 			data[k] = data[idx];
 			data[idx] = temp;
+			System.out.println(Arrays.toString(data));
 		}
-		System.out.println(Arrays.toString(data));
+
 	}
 }
