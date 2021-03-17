@@ -15,7 +15,7 @@ public class Test01 {
 		b.result();
 		c.result();
 			 
-		System.out.println("디럭스 룸과 스탠다드 룸 차이 " + (a.avg-b.avg) + "원");
+		//System.out.println("평균 차이" + (a.avg-b.avg) + "원");
 	}
 } 
  
