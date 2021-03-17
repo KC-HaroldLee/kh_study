@@ -94,4 +94,37 @@ public class Info {
 	public void cha() {
 		System.out.println(timeEnd - timeStart);
 	}
+	
+	//가상 getter메소드
+	//1. 시간만 분리하는 기능
+	//2. 분만 분리하는 기능
+	
+	public int getStartHour() {
+		return timeStart/100;
+	}
+	public int getStartMin() {
+		return timeStart%100;
+	}
+	public int getStartTime() {
+		return getStartHour()*60 + getStartMin();
+	}
+	
+	public int getEndHour() {
+		return timeEnd/100;
+	}
+	public int getEndMin() {
+		return timeEnd%100;
+	}
+	
+	public int getEndTime() {
+		return getEndHour()*60 + getEndMin();
+	}
+	
+	public int getTime() {
+		return getEndTime()-getStartTime();
+	}
+	
+	public String termTime(){
+		return (getTime()/60) + "시간 " + (getTime()%60) + "분";
+	}
 }

@@ -13,5 +13,10 @@ public class Test01 {
 		a.result();
 		b.result();
 		c.result();
+		
+		//Q.주간권 이용시간을 출력
+		//A:9시간 또는 9시간 0분;
+		
+		System.out.println(a.termTime());
 	}
 }
