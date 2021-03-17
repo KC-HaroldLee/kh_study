@@ -50,7 +50,7 @@ public class Info {
 	public void result() {
 		System.out.println("<스키장 이용요금>");
 
-		System.out.println("이용권 이름 " + this.name);
+		System.out.println("이용권 이름 : " + name); // this 빼도 됨
 
 		if (timeStart < 1000) {
 			System.out.println("시작시간 : 0" + this.timeStart);
