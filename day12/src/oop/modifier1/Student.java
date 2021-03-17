@@ -6,19 +6,20 @@ public class Student {
 	private int java;
 	private int database;
 
-	void setName(String name) {
+	//public 외부 접근을 허용한다.
+	public void setName(String name) {
 		this.name = name;
 	}
 	
-	void setJava(int java) {
+	public void setJava(int java) {
 		this.java = java;
 	}
 	
-	void setDatabase(int database) {
+	public void setDatabase(int database) {
 		this.database = database;	
 	}
 	
-	void set(String name, int java, int database) {
+	public void set(String name, int java, int database) {
 		this.setName(name);
 		this.setJava(java);
 		this.setDatabase(database);
@@ -27,23 +28,23 @@ public class Student {
 	//getter method의 기본 형태
 	//일단 보이드
 	//void getName() {
-	String getName() {
+	public String getName() {
 		return this.name;
 	}
-	int getJava() {
+	public int getJava() {
 		return this.java;
 	}
-	int getDatabse() {
+	public int getDatabse() {
 		return this.database;
 	}
 	
 	//가상의 getter method도 추가 가능
 	//변수가 없는대도 가능
-	int getTotal() {
+	public int getTotal() {
 		return this.java + this.database;
 	}
 	
-	double getAverage() {
+	public double getAverage() {
 		return getTotal()/2.0;
 	}
 }
