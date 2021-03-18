@@ -31,6 +31,7 @@ public class Product {
 		return price;
 	}
 
+	//메소드...
 	public void hello() {
 		System.out.println("안녕!");
 	}
