@@ -19,6 +19,8 @@ public abstract class Samsung extends Phone {
 		case "실버":
 		case "아쿠아블루":
 			super.color = color;
+		default:
+			return;
 		}
 	}
 }
