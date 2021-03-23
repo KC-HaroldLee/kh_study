@@ -18,6 +18,7 @@ public class Test03_03 {
 				for (int i = data[k].length; i >= 0; i--) {
 					data[k][i] = (-i + 5) + k * 5;
 					
+					
 				}
 			}
 		}
