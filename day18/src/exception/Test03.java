@@ -5,11 +5,9 @@ import java.util.Scanner;
 
 public class Test03 {
 	public static void main(String[] args) {
-		// 이것들을
-		//java.util.InputMismatchException
-		//java.lang.ArithmeticException
-		//try블록을 만들어서 문제가 될 소지를 있는 명역을 감시한다.(CCTV)
-		//catch 만들어서
+		//예외 처리를 한 뒤 처리 블록에서 기존의 예외 메시지를 보고 싶은 경우
+		//오류를 추적하여 해결하기 위해서 위치 정보를 봐야할 경우가 발생한다.
+		//예외 객체를 이용하여 예외메시지를 출력하도록 지시한다.
 		
 		try {
 		Scanner sc = new Scanner(System.in);
@@ -27,8 +25,9 @@ public class Test03 {
 		
 		
 		catch(RuntimeException e1){
-			System.out.println("오류발생!");
+			e1.printStackTrace();
 		}
+		
 		
 		/*
 		catch(InputMismatchException e1){
