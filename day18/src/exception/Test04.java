@@ -3,7 +3,7 @@ package exception;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Test03 {
+public class Test04 {
 	public static void main(String[] args) {
 		//예외 처리를 한 뒤 처리 블록에서 기존의 예외 메시지를 보고 싶은 경우
 		//오류를 추적하여 해결하기 위해서 위치 정보를 봐야할 경우가 발생한다.
