@@ -6,36 +6,36 @@ import java.util.Set;
 
 public class Test03 {
 	public static void main(String[] args) {
-	//Q. setÀÇ Ãâ·ÂÀº ¾î¶»°Ô ÇÏ´Â°¡?
-	//Iterator¸¦ »ç¿ëÇÏ´Â ¹æ¹ı
-	//È®Àå for¸¦ »ç¿ëÇÏ´Â ¹æ¹ı
-	Set<String> set = new HashSet<>();
-	
-	set.add("ÀÚ¹Ù");
-	set.add("ÆÄÀÌ½ã");
-	set.add("C++");
-	set.add("¾Èµå·ÎÀÌµå");
-	set.add("iOs");
-	
-	//Iterator
-	Iterator<String> iter = set.iterator();
-	while(iter.hasNext()){
-		String item = iter.next();
-	System.out.println(item);
-	
-	}
-	
-	//È®Àå for¹®
-	for(String item : set) {
-		System.out.println();
-	}
-	
-	
-	//System.out.println(set);
-	
-	//setÀº ÇÏ³ª¸¸ »ÌÀ» ¼ö ¾ø´Ù.
-	
-	
-		
-}
-}
+			//Q. setì˜ ì¶œë ¥ì€ ì–´ë–»ê²Œ í•˜ëŠ”ê°€?
+			//Iteratorë¥¼ ì‚¬ìš©í•˜ëŠ” ë°©ë²•
+			//í™•ì¥ forë¥¼ ì‚¬ìš©í•˜ëŠ” ë°©ë²•
+			Set<String> set = new HashSet<>();
+			
+			set.add("ìë°”");
+			set.add("íŒŒì´ì¬");
+			set.add("C++");
+			set.add("ì•ˆë“œë¡œì´ë“œ");
+			set.add("iOs");
+			
+			//Iterator
+			Iterator<String> iter = set.iterator();
+			while(iter.hasNext()){
+				String item = iter.next();
+			System.out.println(item);
+			
+			}
+			
+			//í™•ì¥ forë¬¸
+			for(String item : set) {
+				System.out.println();
+			}
+			
+			
+			//System.out.println(set);
+			
+			//setì€ í•˜ë‚˜ë§Œ ë½‘ì„ ìˆ˜ ì—†ë‹¤.
+			
+			
+				
+		}
+		}

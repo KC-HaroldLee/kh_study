@@ -8,30 +8,31 @@ import java.util.Set;
 public class Test03 {
 	public static void main(String[] args) {
 
-		// ÀúÀå¼ÒÀÇ ¸ğµç key, value¸¦ Ãâ·Â.
-		// mapÀº ÀÚÃ¼ÀûÀ¸·Î ÀüÃ¼ Ãâ·ÂÇÏ´Â ¹æ¹ıÀÌ ¾ø´Ù.
+
+		// ì €ì¥ì†Œì˜ ëª¨ë“  key, valueë¥¼ ì¶œë ¥.
+		// mapì€ ìì²´ì ìœ¼ë¡œ ì „ì²´ ì¶œë ¥í•˜ëŠ” ë°©ë²•ì´ ì—†ë‹¤.
 		Map<String, Integer> map = new HashMap<>();
-		map.put("¼­ÀÎÈ¯", 100);
-		map.put("ÀÌ¼®Çö", 90);
-		map.put("±è¼ºÇÏ", 70);
-		map.put("ÃÖ¼º¹Î", 60);
-		map.put("ÀÌÇØ¹®", 65);
+		map.put("ì„œì¸í™˜", 100);
+		map.put("ì´ì„í˜„", 90);
+		map.put("ê¹€ì„±í•˜", 70);
+		map.put("ìµœì„±ë¯¼", 60);
+		map.put("ì´í•´ë¬¸", 65);
 		
-		//1.key¸¸ setÀ¸·Î ÃßÃâÇÏ¿© Ãâ·ÂÇÏ´Â ¹æ¹ı.
-		//2.EntrySetÀ» ÀÌ¿ëÇÏ´Â ¹æ¹ı.
+		//1.keyë§Œ setìœ¼ë¡œ ì¶”ì¶œí•˜ì—¬ ì¶œë ¥í•˜ëŠ” ë°©ë²•.
+		//2.EntrySetì„ ì´ìš©í•˜ëŠ” ë°©ë²•.
 		
-		//1.Map¿¡¼­ -> Set<String> -> Iterator<String> ¶Ç´Â È®Àå for
+		//1.Mapì—ì„œ -> Set<String> -> Iterator<String> ë˜ëŠ” í™•ì¥ for
 		Set<String> set = map.keySet();
 		for(String name : set) {
-			System.out.println("ÀÌ¸§ = " + name);
-			System.out.println("Á¡¼ö = " + map.get(name));
+			System.out.println("ì´ë¦„ = " + name);
+			System.out.println("ì ìˆ˜ = " + map.get(name));
 		}
 		
-		//2.EntrySetÀ» ÀÌ¿ëÇÏ´Â ¹æ¹ı.
-		Set<	Entry<String, Integer>	> entrys = map.entrySet(); //ÀÌ·¯¸é EntryµéÀÌ »ı¼ºµÈ´Ù ÀÌµéÀº À§Ä¡¸¸ ±â¾ïÇÏ°í ÀÖ´Ù.
+		//2.EntrySetì„ ì´ìš©í•˜ëŠ” ë°©ë²•.
+		Set<	Entry<String, Integer>	> entrys = map.entrySet(); //ì´ëŸ¬ë©´ Entryë“¤ì´ ìƒì„±ëœë‹¤ ì´ë“¤ì€ ìœ„ì¹˜ë§Œ ê¸°ì–µí•˜ê³  ìˆë‹¤.
 		for (Entry<String, Integer> entry : entrys) {
-			System.out.println("ÀÌ¸§ = " + entry.getKey());
-			System.out.println("Á¡¼ö = " + entry.getValue());
+			System.out.println("ì´ë¦„ = " + entry.getKey());
+			System.out.println("ì ìˆ˜ = " + entry.getValue());
 		}
 		
 	}

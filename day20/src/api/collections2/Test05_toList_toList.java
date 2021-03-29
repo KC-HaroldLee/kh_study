@@ -7,50 +7,58 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Test05_toList_toList {
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
-		//¾ÆÀÌÆù°ú °¶·°½Ã ÈŞ´ëÆù »ö»óÀº
-		//¾ÆÀÌÆù - "ºí·¢", "±×¸°", "¿»·Î¿ì", "ÆÛÇÃ", "·¹µå", "È­ÀÌÆ®"
-		//°¶·°½Ã - "ºí·¢", "È­ÀÌÆ®", "ÆÒÅÒ ±×·¹ÀÌ", "ÆÒÅÒ ÇÎÅ©"
+		//ì•„ì´í°ê³¼ ê°¤ëŸ­ì‹œ íœ´ëŒ€í° ìƒ‰ìƒì€
+		//ì•„ì´í° - "ë¸”ë™", "ê·¸ë¦°", "ì˜ë¡œìš°", "í¼í”Œ", "ë ˆë“œ", "í™”ì´íŠ¸"
+		//ê°¤ëŸ­ì‹œ - "ë¸”ë™", "í™”ì´íŠ¸", "íŒ¬í…€ ê·¸ë ˆì´", "íŒ¬í…€ í•‘í¬"
 		
-		List<String> i = new ArrayList<>();
-		i.add("ºí·¢");
-		i.add("±×¸°");
-		i.add("¿»·Î¿ì");
-		i.add("ÆÛÇÃ");
-		i.add("·¹µå");
-		i.add("È­ÀÌÆ®");		
+		Set<String> i = new HashSet<>();
+		i.add("ë¸”ë™");
+		i.add("ê·¸ë¦°");
+		i.add("ì˜ë¡œìš°");
+		i.add("í¼í”Œ");
+		i.add("ë ˆë“œ");
+		i.add("í™”ì´íŠ¸");		
 		
-		List<String> g = new ArrayList<>();
-		g.add("ºí·¢");
-		g.add("È­ÀÌÆ®");
-		g.add("ÆÒÅÒ±×·¹ÀÌ");
-		g.add("ÆÒÅÒÇÎÅ©");
+		Set<String> g = new HashSet<>();
+		g.add("ë¸”ë™");
+		g.add("í™”ì´íŠ¸");
+		g.add("íŒ¬í…€ê·¸ë ˆì´");
+		g.add("íŒ¬í…€í•‘í¬");
 		
-		//1.¾ÆÀÌÆù°ú °¶·°½Ã ÈŞ´ëÆùÀÌ °øÅëÀûÀ¸·Î °¡Áö°í ÀÖ´Â »ö»ó.
-		List<String> a = new ArrayList<>();
-		a.addAll(i);
+		//1.ì•„ì´í°ê³¼ ê°¤ëŸ­ì‹œ íœ´ëŒ€í°ì´ ê³µí†µì ìœ¼ë¡œ ê°€ì§€ê³  ìˆëŠ” ìƒ‰ìƒ.
+		Set<String> a = new HashSet<>(i);
 		a.retainAll(g);
-		System.out.println("°øÅë»ö»ó : " + a);
+		System.out.println("<ê³µí†µ ìƒ‰ìƒ>");
+		for(String color : a) {
+		System.out.println(color);
+		}
 		
+		//2.ì•„ì´í°ë§Œ ê°€ì§€ê³  ìˆëŠ” ìƒ‰ìƒ
+		Set<String> b = new HashSet<>(i);
+		b.removeAll(g);		
+		System.out.println("<ì•„ì´í° ê³ ìœ  ìƒ‰ìƒ>");
+		for(String color : b) {
+		System.out.println(color);
+		}
 		
-		//2.¾ÆÀÌÆù¸¸ °¡Áö°í ÀÖ´Â »ö»ó
-		List<String> b = new ArrayList<>(i);
-		//b.addAll(i);
-		b.removeAll(g);
-		System.out.println("¾ÆÀÌÆù¸¸ °¡Áö°í ÀÖ´Â »ö»ó : " + b);
-		
-		//3.°¶·°½Ã¸¸ °¡Áö°í ÀÖ´Â »ö»ó
-		List<String> c = new ArrayList<>();
-		c.addAll(g);
+		//3.ê°¤ëŸ­ì‹œë§Œ ê°€ì§€ê³  ìˆëŠ” ìƒ‰ìƒ
+		Set<String> c = new HashSet<>(g);
 		c.removeAll(i);
-		System.out.println("°¶·°½Ã¸¸ °¡Áö°í ÀÖ´Â »ö»ó : " + c);
+		System.out.println("<ê°¤ëŸ­ì‹œë§Œ ê³ ìœ  ìƒ‰ìƒ>");
+		for(String color : c) {
+			System.out.println(color);
+		}
 		
-		//4.¸ğµç »ö»ó
-		List<String> d = new ArrayList<>();
-		d.addAll(g);
+		//4.ëª¨ë“  ìƒ‰ìƒ
+		Set<String> d = new HashSet<>(g);
 		d.addAll(i);
-		System.out.println("¸ğµç »ö»ó : " + d); 
+		System.out.println("<ëª¨ë“  ìƒ‰ìƒ>");
+		for(String color : d) {
+			System.out.println(color);
+		}
 	}
 	
 }
+

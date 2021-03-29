@@ -1,61 +1,48 @@
 package api.collections2;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Test05 {
 	public static void main(String[] args) {
+		//Map <K, V>
+		//Set(K)ì— ê°’(v) ë¶™ì€ í˜•íƒœ
+		//ì„¸íŠ¸ ë°ì´í„° ì¥ì†Œ
 		
-		//¾ÆÀÌÆù°ú °¶·°½Ã ÈŞ´ëÆù »ö»óÀº
-		//¾ÆÀÌÆù - "ºí·¢", "±×¸°", "¿»·Î¿ì", "ÆÛÇÃ", "·¹µå", "È­ÀÌÆ®"
-		//°¶·°½Ã - "ºí·¢", "È­ÀÌÆ®", "ÆÒÅÒ ±×·¹ÀÌ", "ÆÒÅÒ ÇÎÅ©"
+		//ex : í•™ìƒëª…ê³¼ ì ìˆ˜ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ Map ìƒì„±
+		//K = key. ì‹ë³„ì, ìœ ì¼í•´ì•¼í•˜ëŠ” í•­ëª©(ì¤‘ë³µ ë¶ˆê°€)
+		//V = value. ë°ì´í„°. ì¤‘ë³µì´ í—ˆìš©ë˜ëŠ” í•­ëª©.
 		
-		Set<String> i = new HashSet<>();
-		i.add("ºí·¢");
-		i.add("±×¸°");
-		i.add("¿»·Î¿ì");
-		i.add("ÆÛÇÃ");
-		i.add("·¹µå");
-		i.add("È­ÀÌÆ®");		
+		Map<String, Integer> map = new HashMap<>();
 		
-		Set<String> g = new HashSet<>();
-		g.add("ºí·¢");
-		g.add("È­ÀÌÆ®");
-		g.add("ÆÒÅÒ±×·¹ÀÌ");
-		g.add("ÆÒÅÒÇÎÅ©");
+		//ì¶”ê°€ : .add()ê°€ ì•„ë‹ˆë¼ .put() - setë°ì´í„°ë¥¼ ì¶”ê°€í•˜ëŠ” ê²ƒì€ put
+		map.put("ì„œì¸í™˜",100);
+		map.put("ì´ì„í˜„",90);
+		map.put("ê¹€ì„±í•˜",70);
+		map.put("ìµœì„±ë¯¼",60);
+		map.put("ì´í•´ë¬¸",65);
 		
-		//1.¾ÆÀÌÆù°ú °¶·°½Ã ÈŞ´ëÆùÀÌ °øÅëÀûÀ¸·Î °¡Áö°í ÀÖ´Â »ö»ó.
-		Set<String> a = new HashSet<>(i);
-		a.retainAll(g);
-		System.out.println("<°øÅë »ö»ó>");
-		for(String color : a) {
-		System.out.println(color);
-		}
+		//ê²€ìƒ‰ , í•­ëª©ì´ 2ê°œì´ë‹¤...
+		//-containsKey();
+		//-containsKValue();
+		System.out.println(map.containsKey("ê¹€ì„±í•˜")); //keyì— ê¹€ì„±í•˜ê°€ ìˆìŠµë‹ˆê¹Œ?
+		System.out.println(map.containsValue(65)); //
 		
-		//2.¾ÆÀÌÆù¸¸ °¡Áö°í ÀÖ´Â »ö»ó
-		Set<String> b = new HashSet<>(i);
-		b.removeAll(g);		
-		System.out.println("<¾ÆÀÌÆù °íÀ¯ »ö»ó>");
-		for(String color : b) {
-		System.out.println(color);
-		}
-		
-		//3.°¶·°½Ã¸¸ °¡Áö°í ÀÖ´Â »ö»ó
-		Set<String> c = new HashSet<>(g);
-		c.removeAll(i);
-		System.out.println("<°¶·°½Ã¸¸ °íÀ¯ »ö»ó>");
-		for(String color : c) {
-			System.out.println(color);
-		}
-		
-		//4.¸ğµç »ö»ó
-		Set<String> d = new HashSet<>(g);
-		d.addAll(i);
-		System.out.println("<¸ğµç »ö»ó>");
-		for(String color : d) {
-			System.out.println(color);
-		}
-	}
-	
-}
+		//ì¶”ì¶œ : keyë¥¼ ì´ìš©í•´ì„œ valueë¥¼ ì¶”ì¶œí•˜ëŠ” ê²ƒë§Œ ê°€ëŠ¥í•˜ë©° ë°˜ëŒ€ëŠ” ë¶ˆê°€ëŠ¥.
+		//ê·¸ë˜ì„œ keyì¸ê°€?
 
+		System.out.println(map.get("ê¹€ì„±í•˜"));
+		System.out.println(map.get("ì„ë‹¤ì •")); //null, ì—ëŸ¬ëŠ” ì•ˆë‚˜ì§€ë§Œ ì´ê±¸ intê°’ì— ë„£ìœ¼ë ¤ë©´ ì—ëŸ¬
+		//ê·¸ëŸ¬ë‹ˆê¹Œ
+		//int a = map.get("ì„ë‹¤ì •"); // ì—ëŸ¬
+		Integer score = map.get("ì„ë‹¤ì •");
+		
+		//ì‚­ì œ
+		map.remove("ìµœì„±ë¯¼");
+		map.remove("ìµœì„±ë¯¼, 60");
+		
+		System.out.println(map);
+	}
+}

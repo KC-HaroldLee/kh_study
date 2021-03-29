@@ -6,34 +6,34 @@ import java.util.TreeSet;
 
 public class Test01 {
 	public static void main(String[] args) {
-		//Set : ¼ø¼­°¡ ³»ºÎÀûÀ¸·Î Á¤ÇØÁ® ÀÖ´Â ÀúÀå¼Ò.
-		//Treeset, Hashset
-		//=ºü¸¥ ÀüÃ¼ Á¶È¸¸¦ ÇÏ±â À§ÇØ¼­ 
-		//ÀÏ°ıÃ³¸®¿¡È°¿ëÇÑ´Ù. µû¶ó¼­ getµµ ¾ø°í indexµµ ¾ÈµÈ´Ù.
-		
-		//Set<Integer> set = new TreeSet<>();
-		Set<Integer> set = new HashSet<>();
-		
-		//Ãß°¡
-		set.add(25);
-		set.add(12);
-		set.add(1);
-		set.add(15);
-		set.add(55);
-		set.add(52);
-		set.add(11);
-		
-		//°Ë»ö
-		System.out.println(set.contains(12));
-		
-		
-		
-		
-		//Ãâ·Â
-		System.out.println(set);
-		
-		System.out.println(set.size());
-		
-		
-	}
-}
+		//Set : ìˆœì„œê°€ ë‚´ë¶€ì ìœ¼ë¡œ ì •í•´ì ¸ ìˆëŠ” ì €ì¥ì†Œ.
+				//Treeset, Hashset
+				//=ë¹ ë¥¸ ì „ì²´ ì¡°íšŒë¥¼ í•˜ê¸° ìœ„í•´ì„œ 
+				//ì¼ê´„ì²˜ë¦¬ì—í™œìš©í•œë‹¤. ë”°ë¼ì„œ getë„ ì—†ê³  indexë„ ì•ˆëœë‹¤.
+				
+				//Set<Integer> set = new TreeSet<>();
+				Set<Integer> set = new HashSet<>();
+				
+				//ì¶”ê°€
+				set.add(25);
+				set.add(12);
+				set.add(1);
+				set.add(15);
+				set.add(55);
+				set.add(52);
+				set.add(11);
+				
+				//ê²€ìƒ‰
+				System.out.println(set.contains(12));
+				
+				
+				
+				
+				//ì¶œë ¥
+				System.out.println(set);
+				
+				System.out.println(set.size());
+				
+				
+			}
+		}

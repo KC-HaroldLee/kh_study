@@ -6,9 +6,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Test07 {
 public static void main(String[] args) {
 	
-	//ArrayList = Á¶È¸°¡ ºü¸§
-	//LinkedList = ¼öÁ¤ÀÌ ÆíÇÔ
-	//CopyOnWriteArrayList = ArrayListÀÇ thread-safe¹öÀüÀÌ´Ù.
-	List <String> db  = new CopyOnWriteArrayList<>();
+		//ArrayList = ì¡°íšŒê°€ ë¹ ë¦„
+		//LinkedList = ìˆ˜ì •ì´ í¸í•¨
+		//CopyOnWriteArrayList = ArrayListì˜ thread-safeë²„ì „ì´ë‹¤.
+		List <String> db  = new CopyOnWriteArrayList<>();
 }
 }

@@ -6,40 +6,40 @@ import java.util.Map;
 public class Test01 {
 	public static void main(String[] args) {
 		//Map <K, V>
-		//Set(K)¿¡ °ª(v) ºÙÀº ÇüÅÂ
-		//¼¼Æ® µ¥ÀÌÅÍ Àå¼Ò
+		//Set(K)ì— ê°’(v) ë¶™ì€ í˜•íƒœ
+		//ì„¸íŠ¸ ë°ì´í„° ì¥ì†Œ
 		
-		//ex : ÇĞ»ı¸í°ú Á¡¼ö¸¦ ÀúÀåÇÏ±â À§ÇÑ Map »ı¼º
-		//K = key. ½Äº°ÀÚ, À¯ÀÏÇØ¾ßÇÏ´Â Ç×¸ñ(Áßº¹ ºÒ°¡)
-		//V = value. µ¥ÀÌÅÍ. Áßº¹ÀÌ Çã¿ëµÇ´Â Ç×¸ñ.
+		//ex : í•™ìƒëª…ê³¼ ì ìˆ˜ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ Map ìƒì„±
+		//K = key. ì‹ë³„ì, ìœ ì¼í•´ì•¼í•˜ëŠ” í•­ëª©(ì¤‘ë³µ ë¶ˆê°€)
+		//V = value. ë°ì´í„°. ì¤‘ë³µì´ í—ˆìš©ë˜ëŠ” í•­ëª©.
 		
 		Map<String, Integer> map = new HashMap<>();
 		
-		//Ãß°¡ : .add()°¡ ¾Æ´Ï¶ó .put() - setµ¥ÀÌÅÍ¸¦ Ãß°¡ÇÏ´Â °ÍÀº put
-		map.put("¼­ÀÎÈ¯",100);
-		map.put("ÀÌ¼®Çö",90);
-		map.put("±è¼ºÇÏ",70);
-		map.put("ÃÖ¼º¹Î",60);
-		map.put("ÀÌÇØ¹®",65);
+		//ì¶”ê°€ : .add()ê°€ ì•„ë‹ˆë¼ .put() - setë°ì´í„°ë¥¼ ì¶”ê°€í•˜ëŠ” ê²ƒì€ put
+		map.put("ì„œì¸í™˜",100);
+		map.put("ì´ì„í˜„",90);
+		map.put("ê¹€ì„±í•˜",70);
+		map.put("ìµœì„±ë¯¼",60);
+		map.put("ì´í•´ë¬¸",65);
 		
-		//°Ë»ö , Ç×¸ñÀÌ 2°³ÀÌ´Ù...
+		//ê²€ìƒ‰ , í•­ëª©ì´ 2ê°œì´ë‹¤...
 		//-containsKey();
 		//-containsKValue();
-		System.out.println(map.containsKey("±è¼ºÇÏ")); //key¿¡ ±è¼ºÇÏ°¡ ÀÖ½À´Ï±î?
+		System.out.println(map.containsKey("ê¹€ì„±í•˜")); //keyì— ê¹€ì„±í•˜ê°€ ìˆìŠµë‹ˆê¹Œ?
 		System.out.println(map.containsValue(65)); //
 		
-		//ÃßÃâ : key¸¦ ÀÌ¿ëÇØ¼­ value¸¦ ÃßÃâÇÏ´Â °Í¸¸ °¡´ÉÇÏ¸ç ¹İ´ë´Â ºÒ°¡´É.
-		//±×·¡¼­ keyÀÎ°¡?
+		//ì¶”ì¶œ : keyë¥¼ ì´ìš©í•´ì„œ valueë¥¼ ì¶”ì¶œí•˜ëŠ” ê²ƒë§Œ ê°€ëŠ¥í•˜ë©° ë°˜ëŒ€ëŠ” ë¶ˆê°€ëŠ¥.
+		//ê·¸ë˜ì„œ keyì¸ê°€?
 
-		System.out.println(map.get("±è¼ºÇÏ"));
-		System.out.println(map.get("ÀÓ´ÙÁ¤")); //null, ¿¡·¯´Â ¾È³ªÁö¸¸ ÀÌ°É int°ª¿¡ ³ÖÀ¸·Á¸é ¿¡·¯
-		//±×·¯´Ï±î
-		//int a = map.get("ÀÓ´ÙÁ¤"); // ¿¡·¯
-		Integer score = map.get("ÀÓ´ÙÁ¤");
+		System.out.println(map.get("ê¹€ì„±í•˜"));
+		System.out.println(map.get("ì„ë‹¤ì •")); //null, ì—ëŸ¬ëŠ” ì•ˆë‚˜ì§€ë§Œ ì´ê±¸ intê°’ì— ë„£ìœ¼ë ¤ë©´ ì—ëŸ¬
+		//ê·¸ëŸ¬ë‹ˆê¹Œ
+		//int a = map.get("ì„ë‹¤ì •"); // ì—ëŸ¬
+		Integer score = map.get("ì„ë‹¤ì •");
 		
-		//»èÁ¦
-		map.remove("ÃÖ¼º¹Î");
-		map.remove("ÃÖ¼º¹Î, 60");
+		//ì‚­ì œ
+		map.remove("ìµœì„±ë¯¼");
+		map.remove("ìµœì„±ë¯¼, 60");
 		
 		System.out.println(map);
 	}

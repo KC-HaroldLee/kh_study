@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Test03_chal {
 	public static void main(String[] args) {
 		
-	int[] doing = {1,2,3,4,5,6,7,8,9,10,11,12,13};
-	
-	for(int no : doing) {
-		System.out.println("Á¦" + no + "ÀÇ ¾ÆÇØ°¡ ¹«¼·´Ù°í±×¸®¿À.");
-	}
+		int[] doing = {1,2,3,4,5,6,7,8,9,10,11,12,13};
 		
-}
-}
+		for(int no : doing) {
+			System.out.println("ì œ" + no + "ì˜ ì•„í•´ê°€ ë¬´ì„­ë‹¤ê³ ê·¸ë¦¬ì˜¤.");
+		}
+			
+	}
+	}

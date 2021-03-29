@@ -7,45 +7,37 @@ import java.util.Set;
 
 public class Test04 {
 	public static void main(String[] args) {
-		// ÅõÇ¥ ÇÁ·Î±×·¥
-		// À½¾Ç °æ¿¬ ÇÁ·Î±×·¥¿¡
-		// ´ÙÀ½°ú °°Àº °ÍµéÀÌ Ãâ¿¬Çß´Ù°í °¡Á¤ÇÕ½Ã´Ù.
-		// ÀÓ¿µ¿õ, ¾ÆÀÌÀ¯, Àå¹üÁØ, BTS, ÆúÅ´ (À» µî·ÏÇÏ°í)
-		// »ç¿ëÀÚ¿¡°Ô ÅõÇ¥ÇÏ°í ½ÍÀº °¡¼ö ÀÌ¸§À» ÀÔ·Â¹Şµµ·Ï ±¸Çö
+			// íˆ¬í‘œ í”„ë¡œê·¸ë¨
+			// ìŒì•… ê²½ì—° í”„ë¡œê·¸ë¨ì—
+			// ë‹¤ìŒê³¼ ê°™ì€ ê²ƒë“¤ì´ ì¶œì—°í–ˆë‹¤ê³  ê°€ì •í•©ì‹œë‹¤.
+			// ì„ì˜ì›…, ì•„ì´ìœ , ì¥ë²”ì¤€, BTS, í´í‚´ (ì„ ë“±ë¡í•˜ê³ )
+			// ì‚¬ìš©ìì—ê²Œ íˆ¬í‘œí•˜ê³  ì‹¶ì€ ê°€ìˆ˜ ì´ë¦„ì„ ì…ë ¥ë°›ë„ë¡ êµ¬í˜„
 
-		Map<String, Integer> singer = new HashMap<>();
-		singer.put("ÀÓ¿µ¿õ", 0);
-		singer.put("¾ÆÀÌÀ¯", 0);
-		singer.put("Àå¹üÁØ", 0);
-		singer.put("BTS", 0);
-		singer.put("ÆúÅ´", 0);
+			Map<String, Integer> singer = new HashMap<>();
+			singer.put("ì„ì˜ì›…", 0);
+			singer.put("ì•„ì´ìœ ", 0);
+			singer.put("ì¥ë²”ì¤€", 0);
+			singer.put("BTS", 0);
+			singer.put("í´í‚´", 0);
 
-		Scanner sc = new Scanner(System.in);
-		
-		boolean end = false;
-		while(!end){
-		System.out.println("ÀÓ¿µ¿õ, ¾ÆÀÌÀ¯, Àå¹üÁØ, BTS, ÆúÅ´ Áß¿¡ ÅõÇ¥ÇÏ°í ½ÍÀº °¡¼ö ÀÌ¸§À» Àû¾îÁÖ¼¼¿ä... \"±×¸¸\"À» ÀÔ·ÂÇÏ¸é ³¡³³´Ï´Ù.");
-		String vote = sc.nextLine();
-			if(singer.containsKey(vote)) {
-				singer.put(vote, singer.get(vote)+1);
-				System.out.println(vote + "¿¡°Ô ÅõÇ¥Çß½À´Ï´Ù. ÇöÀç " + singer.get(vote) + "Ç¥ÀÔ´Ï´Ù." );
-			}
-			else if(vote.equals("±×¸¸")) {
-				System.out.println("ÅõÇ¥¸¦ Á¾·áÇÕ´Ï´Ù");
-				end = true;
-			}
-			else {
-			System.out.println(vote + "¶ó´Â °¡¼ö´Â ¾ø½À´Ï´Ù.");
+			Scanner sc = new Scanner(System.in);
+			
+			//for
+			System.out.println("ì„ì˜ì›…, ì•„ì´ìœ , ì¥ë²”ì¤€, BTS, í´í‚´ ì¤‘ì— íˆ¬í‘œí•˜ê³  ì‹¶ì€ ê°€ìˆ˜ ì´ë¦„ì„ ì ì–´ì£¼ì„¸ìš”... \"ê·¸ë§Œ\"ì„ ì…ë ¥í•˜ë©´ ëë‚©ë‹ˆë‹¤.");
+			String vote = sc.nextLine();
+			
+			boolean stop = false;
+			
+			//while(!stop){
+				
+				if(singer.containsKey(vote)) {
+					singer.put(vote, singer.get(vote)+1);
+					System.out.println(singer + "ì—ê²Œ íˆ¬í‘œí–ˆìŠµë‹ˆë‹¤. í˜„ì¬ " + singer.get(vote) + "í‘œì…ë‹ˆë‹¤." );
+				}
+				
 			}
 			
+			
 		}
-		
-		Set<String> result = singer.keySet();
-		for(String name : result) {
-			System.out.println(name + " : " + singer.get(name) + "Ç¥");
-		}
-		
-		
-	}
 
-}
+	}

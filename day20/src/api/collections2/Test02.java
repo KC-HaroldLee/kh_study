@@ -11,7 +11,7 @@ public class Test02 {
 		Random r = new Random();
 		
 		int no;
-		//if·Î ÇÑ´Ù!
+		//ifë¡œ í•œë‹¤!
 		
 		for(int i=0; i<6; i++) {
 			no=r.nextInt(45)+1;
@@ -20,8 +20,8 @@ public class Test02 {
 			}
 			else{
 			lotto.add(no);
-			// ¾î ±Ùµ¥ ±Ã±ÝÇÔ ¤»¤»
-			//System.out.println(lotto); // º°°Å ¸ø Ã£À½.
+			// ì–´ ê·¼ë° ê¶ê¸ˆí•¨ ã…‹ã…‹
+			//System.out.println(lotto); // ë³„ê±° ëª» ì°¾ìŒ.
 		}
 		}
 		

@@ -5,38 +5,38 @@ import java.util.TreeSet;
 
 public class Test04 {
 	public static void main(String[] args) {
-		//ÁıÇÕ¿¬»ê
-		//=¼­·Î ´Ù¸¥ µÎ ÁıÇÕ°£ÀÇ ¿¬»ê ex : ÇÕÁıÇÕ, ±³ÁıÇÕ, Â÷ÁıÇÕ
-		
-		Set<Integer> a = new TreeSet<>();
-		a.add(10);
-		a.add(20);
-		a.add(30);
-		
-		Set<Integer> b = new TreeSet<>();
-		b.add(20);
-		b.add(30);
-		b.add(40);
-		b.add(50);
-		
-		//ÇÕÁıÇÕ : »õ·Î¿î setÀ» ¸¸µé¾î¼­ a¿Í b¸¦ Ãß°¡.
-		Set<Integer> c = new TreeSet<>();
-		c.addAll(a); //c¿¡ a¸¦ ¸ğµÎ Ãß°¡
-		c.addAll(b); //c¿¡ b¸¦ ¸ğµÎ Ãß°¡
-		//System.out.println(c);
-		
-		//±³ÁıÇÕ : »õ·Î¿î setÀ» ¸¸µé¾î¼­ 
-		Set<Integer> d = new TreeSet<>();
-		d.addAll(a);
-		d.retainAll(b); //d¿¡ b¸¦ ±³ÁıÇÕ ¿¬»ê
-		//System.out.println(d);
-		
-		//Â÷ÁıÇÕ : »õ·Î¿î setÀ»...
-		Set<Integer> e = new TreeSet<>(a); // ÀÌ·¸°Ô ÇØµµ µÈ´Ù. e.addAll(a)°¡ »ı·«µÈ´Ù.
-		e.removeAll(b);
-		System.out.println(e);
-		
-		
-	}
-	
-}
+		//ì§‘í•©ì—°ì‚°
+				//=ì„œë¡œ ë‹¤ë¥¸ ë‘ ì§‘í•©ê°„ì˜ ì—°ì‚° ex : í•©ì§‘í•©, êµì§‘í•©, ì°¨ì§‘í•©
+				
+				Set<Integer> a = new TreeSet<>();
+				a.add(10);
+				a.add(20);
+				a.add(30);
+				
+				Set<Integer> b = new TreeSet<>();
+				b.add(20);
+				b.add(30);
+				b.add(40);
+				b.add(50);
+				
+				//í•©ì§‘í•© : ìƒˆë¡œìš´ setì„ ë§Œë“¤ì–´ì„œ aì™€ bë¥¼ ì¶”ê°€.
+				Set<Integer> c = new TreeSet<>();
+				c.addAll(a); //cì— aë¥¼ ëª¨ë‘ ì¶”ê°€
+				c.addAll(b); //cì— bë¥¼ ëª¨ë‘ ì¶”ê°€
+				//System.out.println(c);
+				
+				//êµì§‘í•© : ìƒˆë¡œìš´ setì„ ë§Œë“¤ì–´ì„œ 
+				Set<Integer> d = new TreeSet<>();
+				d.addAll(a);
+				d.retainAll(b); //dì— bë¥¼ êµì§‘í•© ì—°ì‚°
+				//System.out.println(d);
+				
+				//ì°¨ì§‘í•© : ìƒˆë¡œìš´ setì„...
+				Set<Integer> e = new TreeSet<>(a); // ì´ë ‡ê²Œ í•´ë„ ëœë‹¤. e.addAll(a)ê°€ ìƒëµëœë‹¤.
+				e.removeAll(b);
+				System.out.println(e);
+				
+				
+			}
+			
+		}
