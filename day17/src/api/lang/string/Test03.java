@@ -9,7 +9,6 @@ public class Test03 {
 	//글자수는 얼마입니까?
 	System.out.println(url.length());
 	
-	
 	//http로 시작합니까?
 	System.out.println(url.startsWith("http"));
 	
@@ -24,7 +23,7 @@ public class Test03 {
 	System.out.println(url.indexOf("naver"));
 	
 	//6번째 글씨가 뭔가요?
-	System.out.println(url.charAt(11));
+	System.out.println(url.charAt(5));
 	
 	
 	

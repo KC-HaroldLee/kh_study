@@ -16,9 +16,11 @@ public static void main(String[] args) {
 	
 	
 	//출력
-
+	if(pass1 && pass2) {
 	System.out.println("쿵쿵따");
+	}
+	else {
 	System.out.println("게임오버");
-	
+	}
 }
 }
