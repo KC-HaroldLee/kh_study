@@ -15,25 +15,16 @@ public class Test01 {
 		File target = new File("kh", "single.gp");
 		
 		//스트림
-		FileOutputStream out = new FileOutputStream(target, true);
+		FileOutputStream out = new FileOutputStream(target);
 		
 		//프로그램 ----> out ----> target---->[single.gp]
 		//덮어쓰기다.
-		out.write(65);//out 으로 65라는 byte 데이터를 출력하라!
-		out.write('B'); // 작은 따옴표
-		out.write(9); // \t
-		out.write('h'); 
-		out.write('e'); 
-		out.write('l'); 
-		out.write('l');
-		out.write('o');
-		out.write(10); //enter
-		
-		out.write(30000); //byte 벗어난 값 int를 넣어도 byte로 캐스팅 된다.
-		out.write(29999);
-		out.write(29998);
-		
-		
+		out.write(237);
+		out.write(140);
+		out.write(140);
+		//out.write(236);
+		//out.write(140);
+		//out.write(188);
 		
 		//통로는 close해야한다.
 		out.close();
