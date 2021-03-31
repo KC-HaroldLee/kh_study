@@ -9,6 +9,7 @@ public class Test01 {
 public static void main(String[] args) {
 	//인원수 설정
 	Scanner sc = new Scanner(System.in); 
+	
 	System.out.println("인원 수를 입력");
 	int no = sc.nextInt();
 	String temp = sc.nextLine();
