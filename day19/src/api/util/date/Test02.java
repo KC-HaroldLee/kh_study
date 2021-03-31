@@ -21,6 +21,7 @@ public class Test02 {
 		//보통 업캐스팅을 한다.
 		
 		Format fmt = new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println(fmt.format(a));
 		//SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
 		//time = fmt.format(a);
 		
