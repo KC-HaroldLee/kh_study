@@ -28,7 +28,7 @@ public class Test05 {
 		//-containsKey();
 		//-containsKValue();
 		System.out.println(map.containsKey("김성하")); //key에 김성하가 있습니까?
-		System.out.println(map.containsValue(65)); //
+		System.out.println(map.containsValue(65)); // 65 값이 있습니까?
 		
 		//추출 : key를 이용해서 value를 추출하는 것만 가능하며 반대는 불가능.
 		//그래서 key인가?
