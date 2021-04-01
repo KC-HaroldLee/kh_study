@@ -15,7 +15,7 @@ public static void main(String[] args) {
 	Object e = true;
 	
 	System.out.println(a.getClass());
-	System.out.println(b.getClass());
+	System.out.println(b.getClass()); 
 	System.out.println(sc.getClass());
 	System.out.println(d.getClass());
 	System.out.println(e.getClass());
