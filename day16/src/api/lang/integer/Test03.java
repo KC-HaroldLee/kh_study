@@ -9,5 +9,10 @@ public class Test03 {
 		
 		//int a = null;		
 		Integer b = null; 
+		
+		Integer d = new Integer(2);
+		Integer e = new Integer(3);
+		Integer f = Integer.sum(d, e);
+		System.out.println(f);
 	}
 }
