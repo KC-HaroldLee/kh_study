@@ -19,8 +19,12 @@ public class Wrapper {
         //int h = null;
         
 		Integer i = null; //
-        int j = i; // '0'으로도 받을 수 없다. null과 0 은 같은 값은 아니다.
+        //int j = i; // '0'으로도 받을 수 없다. null과 0 은 같은 값은 아니다.
         System.out.println(i);
 		
+        Integer k = 5;
+        Integer l = 6;
+        Integer m = k+l;
+        System.out.println(m);
 	}
 }

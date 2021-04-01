@@ -17,6 +17,7 @@ public class Lotto_shuffle {
 			win.add(ball);}	
 		}
 		
+		Collections.sort(win);
 		System.out.println(win);
 
 	}

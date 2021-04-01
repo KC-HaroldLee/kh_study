@@ -20,7 +20,7 @@ public class Test05 {
 		//추가 : .add()가 아니라 .put() - set데이터를 추가하는 것은 put
 		map.put("서인환",100);
 		map.put("이석현",90);
-		map.put("김성하",70);
+		map.put("김성하",70);  
 		map.put("최성민",60);
 		map.put("이해문",65);
 		
