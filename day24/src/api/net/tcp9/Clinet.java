@@ -20,7 +20,7 @@ public class Clinet {
 
 		OutputStreamWriter osw = new OutputStreamWriter(socket.getOutputStream());
 		BufferedWriter bw = new BufferedWriter(osw);
-	PrintWriter pw = new PrintWriter(bw);
+		PrintWriter pw = new PrintWriter(bw);
 
 		Scanner sc = new Scanner(System.in);
 
@@ -38,7 +38,6 @@ public class Clinet {
 			pw.println(str);
 			// 바로 비운다
 			pw.flush();
-			pw.close();
 		}
 		sc.close();
 		socket.close();

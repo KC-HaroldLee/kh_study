@@ -32,7 +32,7 @@ public static void main(String[] args) throws IOException {
 	//이건 in이다.
 	while(true) {
 	String str = br.readLine();
-	if(str.equals("!그만!")) {
+	if(str==null) {
 		System.out.println("문장입력을 멈춥니다."); //
 		break;}
 	System.out.println("받은문장 = " + str);
