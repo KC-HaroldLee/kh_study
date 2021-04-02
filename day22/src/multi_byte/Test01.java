@@ -14,7 +14,7 @@ public class Test01 {
 		//multi byte(int, long, float, double ...) 출력
 		File target = new File ("kh", "multi.kh");
 		
-		FileOutputStream out = new FileOutputStream(target);
+		FileOutputStream out = new FileOutputStream(target, true);
 		
 		
 		/*불가능
