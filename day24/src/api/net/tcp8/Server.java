@@ -11,6 +11,7 @@ public class Server {
 	public static void main(String[] args) throws IOException {
 
 		String text = "Welcome";
+		
 		ServerSocket server = new ServerSocket(30000);
 		Socket socket = server.accept();
 		
