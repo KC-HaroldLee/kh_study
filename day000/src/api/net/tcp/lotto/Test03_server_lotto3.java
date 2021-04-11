@@ -16,8 +16,11 @@ public class Test03_server_lotto3 {
 		Socket socket = server.accept();
 		System.out.println("누군가 접속");
 		
-		BufferedOutputStream buffer = new BufferedOutputStream(socket.getOutputStream());
-		DataOutputStream data = new DataOutputStream(buffer);
+		/*BufferedOutputStream buffer = new BufferedOutputStream(socket.getOutputStream());
+		DataOutputStream data = new DataOutputStream(buffer);*/
+		
+	//	BufferedOutputStream buffer = new BufferedOutputStream(socket.getOutputStream());
+		DataOutputStream data = new DataOutputStream(socket.getOutputStream());
 		
 		List <Integer> wins = new ArrayList <>();
 		

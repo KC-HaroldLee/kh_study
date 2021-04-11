@@ -18,9 +18,12 @@ public class Test03_Client_lotto3 {
 	
 		Socket socket = new Socket (adress, port);
 		
-		BufferedInputStream buffer = new BufferedInputStream(socket.getInputStream());
-		DataInputStream data = new DataInputStream(buffer);
+		/*BufferedInputStream buffer = new BufferedInputStream(socket.getInputStream());
+		DataInputStream data = new DataInputStream(buffer);*/
 	
+		//BufferedInputStream buffer = new BufferedInputStream();
+		DataInputStream data = new DataInputStream(socket.getInputStream());
+		
 		int [] balls = new int [6];
 		
 		for(int i  = 0; i< balls.length; i++) {
