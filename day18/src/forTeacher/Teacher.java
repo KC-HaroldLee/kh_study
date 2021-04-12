@@ -45,7 +45,7 @@ public class Teacher {
 		this.subjNo = subjNo;
 		String[] subjList = new String[subjNo]; 
 		System.out.println("과목 개수 " + subjNo + "개로 설정되었습니다.");
-		return subjList();
+		return subList();
 	}
 
 	public void setSubjName(String subjName) {
