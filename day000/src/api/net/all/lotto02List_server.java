@@ -29,9 +29,11 @@ public class lotto02List_server {
 		wins.add(i);
 		}
 		Collections.shuffle(wins);
+		
+		List<Integer>wins2 = new ArrayList<Integer>(wins.subList(0, 6));
 		//List는 인덱스는 get!
 		for(int i=0; i<6; i++) {
-			data.writeInt(wins.get(i));
+			data.writeInt(wins2.get(i));
 			data.flush();
 		}
 		

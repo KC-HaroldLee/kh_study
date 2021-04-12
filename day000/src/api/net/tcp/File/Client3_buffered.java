@@ -15,7 +15,7 @@ public class Client3_buffered {
 		
 		OutputStream out = socket.getOutputStream();
 
-		File target = new File("D:\\IMG_4503.MOV");
+		File target = new File("D:\\폰정리\\85728054-C3CA-4D6E-8F4C-01243B4AFDCF.MOV");
 		FileInputStream filein = new FileInputStream(target);
 		
 		System.out.println("파일 전송을 시작합니다");

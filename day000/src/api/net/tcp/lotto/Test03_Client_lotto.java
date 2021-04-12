@@ -15,6 +15,7 @@ public class Test03_Client_lotto {
 		InetAddress adress = InetAddress.getByName(host);
 		Socket socket = new Socket(adress, port);
 		
+		//이사업체가 대기중이다. 그리고 !그 전에 데이터 포장기사가 풀어줘야한다
 		BufferedInputStream buffer = new BufferedInputStream(socket.getInputStream());
 		DataInputStream data = new DataInputStream(buffer);
 		

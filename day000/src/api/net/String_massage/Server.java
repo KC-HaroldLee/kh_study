@@ -13,7 +13,7 @@ public class Server {
 
 		Socket socket = server.accept();
 		System.out.println("누군가 들어옴");
-
+  
 		InputStreamReader isr = new InputStreamReader(socket.getInputStream());
 		BufferedReader br = new BufferedReader(isr);
 
@@ -24,8 +24,9 @@ public class Server {
 			}
 			System.out.println(text);
 		}
+		System.out.println("서버 닫힘");
 		socket.close();
 		server.close();
-		System.out.println("서버 닫힘");
+
 	}
 }

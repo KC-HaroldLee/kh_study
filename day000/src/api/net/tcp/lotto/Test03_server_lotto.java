@@ -19,13 +19,14 @@ public class Test03_server_lotto {
 		Socket socket = server.accept();
 		System.out.println("누군가 접속");
 
-		// 로또번호 6개 생성
 
 		int[] lotto = new int[] { 10, 15, 20, 25, 30, 35 };
-
+		
+		//이사업체와, 데이터포장기사가 필요하다.
 		BufferedOutputStream buffer = new BufferedOutputStream(socket.getOutputStream());
 		DataOutputStream data = new DataOutputStream(buffer);
 		 
+		//int다 왜냐고? 위에를 int로 했으니까.
 		for(int i = 0; i<6; i++) {
 			data.writeInt(lotto[i]);
 			data.flush();
