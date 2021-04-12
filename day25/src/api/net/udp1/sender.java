@@ -5,7 +5,7 @@ import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 
-public class Sender {
+public class sender {
 public static void main(String[] args) throws IOException {
 	//UDP멀티 캐스트
 	//채널에 가입하여 그룹 전송이 가능하도록 하는 UDP통신방식
