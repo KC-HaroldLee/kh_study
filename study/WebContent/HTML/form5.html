@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상품입력</title>
+</head>
+<body>
+<h1>상품정보입력</h1>
+<form action="/study/product/insert.kh">
+	이름<input type ="text" name = "name" > <br>
+	
+	 <!-- required = "required" 을 줄일 수 있다.
+	checked readonly disabled selected-->
+	종류<select type ="type">
+	<option value= "과자" checked = "checked">과자</option> <!-- 밸류를 입력할 수도 있다. 아니 해야겠네...ㅋㅋㅋㅋ -->
+	<option>주류</option>
+	<option>아이스크림</option>
+	<option>사탕</option>
+	</select> <br>
+	가격<input type="text" name = "price" > <br>
+	제조일<input type="text" name = "made" > <br>
+	만료일<input type="text" name = "expire" > <br>
+	<input type="reset">
+	<input type="submit">
+	
+</form>
+</body>
+</html>

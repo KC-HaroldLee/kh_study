@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상품입력</title>
+</head>
+<body>
+<h1>상품정보입력</h1>
+<form action="/study/product/insert.kh">
+	이름<input type="text" name = "name" > <br>
+	종류 <!--	밸류잊지말자 -->
+	<input type="radio" name = "type"  value = "과자"> 과자
+	<input type="radio" name = "type"  value = "주류"> 주류
+	<input type="radio" name = "type"  value = "아이스크림"> 아이스크림
+	<input type="radio" name = "type"  value = "사탕" > 사탕
+	<br>
+	가격<input type="text" name = "price" > <br>
+	제조일<input type="text" name = "made" > <br>
+	만료일<input type="text" name = "expire" > <br>
+	<input type="reset">
+	<input type="submit">
+	
+</form>
+</body>
+</html>
