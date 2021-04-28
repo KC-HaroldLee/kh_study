@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Item 등록</h1>
-	<form action ="">
+	<form action ="itemInsert.kh">
 		이름 : <input type="text"  name = "itemName"><br><br>
 		가격 : <input type="number" name ="itemPrice"><br><br> 
 		<input type ="submit" value="등록">
