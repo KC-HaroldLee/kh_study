@@ -24,6 +24,8 @@
 <h2>이름 : <%=itemDto.getItemName() %></h2>
 <h2>가격 : <%=itemDto.getItemPrice() %></h2>
 
+<h3><a href="http://127.0.0.1:8080/study/jsp/itemEdit.jsp?itemNo=<%=itemDto.getItemNo() %>">상품수정하기</a></h3>
+<h3><a href="itemEdit.jsp?itemNo=<%=itemDto.getItemNo() %>">상품수정하기</a></h3>
 <h3><a href="http://localhost:8080/study/jsp/itemDelete.kh?=<%=itemDto.getItemNo() %>">상품삭제하기</a></h3>
 <h3><a href="/itemDelete.kh?=<%=itemDto.getItemNo() %>">상품삭제하기</a></h3>
 </body>
