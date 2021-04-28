@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>입력창 스타일링</title>
+<title>입력창 스타일링 </title>
 <style>
 /*
 	상태선택자
