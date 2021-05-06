@@ -14,7 +14,7 @@
 <jsp:include page="/template/header.jsp"></jsp:include>
 	<div class="container-600">	
 		<div class="row">
-			<h2>아이템 상세정보</h2>
+			<h2>!아이템 상세정보!</h2>
 		</div>
 		
 		
