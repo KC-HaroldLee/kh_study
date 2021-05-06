@@ -80,6 +80,14 @@ public class MemberDto {
 	public String getMemberEmail() {
 		return memberEmail;
 	}
+	
+	//화면에 null이 표시되는 것을 막기 위한 가상의 Getter 메소드
+	public String getMemberEmailString() {
+		if(memberEmail == null) {
+			return "";
+		}
+		return memberEmail;
+	}
 
 	public void setMemberEmail(String memberEmail) {
 		this.memberEmail = memberEmail;

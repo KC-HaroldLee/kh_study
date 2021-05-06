@@ -22,6 +22,11 @@
 		</div>
 	</form>
 	
+		<!-- 오류인 상황에는 오류메시지를 추가해준다. -->
+			<%if(request.getParameter("error") != null){ %>
+				<h5 class="error">에러!</h5>
+			<%} %>
+	
 	<div class="row">
 		<h4><a href="#">아이디가 기억나지 않습니다.</a></h4>
 	</div>
