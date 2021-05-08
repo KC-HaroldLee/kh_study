@@ -3,7 +3,17 @@
 
 <%
 	//실제 context path를 구하는 명령
+	//= 템플릿 페이지의 모든 경로는 절대경로로 작성해야 한다.
 	String root = request.getContextPath();
+	///////////////////////////////////////////////////////////////////
+	// 회원 로그인 판정 코드
+	///////////////////////////////////////////////////////////////////
+	// = 세션에 memberNo가 null이 아니면 로그인 상태로 간주
+	// = 세션에는 무슨 데이터든 들어갈 수 있기 때문에 저장을 Object 형태로 업캐스팅하여 수행
+	Integer memberNo = (Integer)session.getAttribute("memberNo");
+	Integer memberPoint = (Integer)session.getAttribute("memberPoint");
+	System.out.println(memberPoint);
+	boolean isLogin = memberNo != null;
 %>    
 
 <!DOCTYPE html>
@@ -30,31 +40,36 @@
 				<li>
 					<a href="#">회원 기능</a>
 					<ul>
-						<li><a href="<%=root%>/member/join.jsp">회원가입</a></li>
-						<li><a href="<%=root%>/membre/login.jsp">로그인</a></li>
+						<%if(isLogin){ %>
 						<li><a href="<%=root%>/member/logout.kh">로그아웃</a></li>
-						<li><a href="<%=root%>/member/myinfo.jsp">내정보 보기</a></li>
-						<li><a href="<%=root%>/####">내정보 수정</a></li>
-						<li><a href="#">회원 탈퇴</a></li>
+						<li><a href="<%=root%>/member/myinfo.jsp">내 정보 보기</a></li>
+						<li><a href="<%=root%>/member/myedit.jsp"">내 정보 수정</a></li>
+						<li><a href="<%=root%>/member/exit.kh">회원 탈퇴</a></li>
 						<li><a href="#">회원 조회/검색</a></li>
+						<%}else{ %>
+						<li><a href="<%=root%>/member/join.jsp">회원 가입</a></li>
+						<li><a href="<%=root%>/member/login.jsp">로그인</a></li>
+						<%} %>
 					</ul>
 				</li>
 				<li>
 					<a href="#">아이템 관리</a>
 					<ul>
-						<li><a href="<%=root%>/item/itemInsert.jsp">아이템 등록</a></li>
-						<li><a href="<%=root%>/item/itemList.jsp">아이템 목록(1)</a></li>
+						<li><a href="#">아이템 등록</a></li>
+						<li><a href="<%=root%>/item/itemList.jsp">아이템 목록</a></li>
 					</ul>
 				</li>
+				<%if(isLogin){ %>
 				<li>
-					<a href="#">상품관리</a>
+					<a href="#">상품 관리</a>
 					<ul>
-						<li><a href="#">상품등록</a></li>
-						<li><a href="<%=root%>/product/productList.jsp">상품목록</a></li>
-						<li><a href="<%=root%>/product/productSearch.jsp">상품검색</a></li>
-						<li><a href="#">서브4</a></li>
+						<li><a href="<%=root%>/product/productInsert.jsp">상품 등록</a></li>
+						<li><a href="<%=root%>/product/productList.jsp">상품 목록</a></li>
+						<li><a href="<%=root%>/product/productRank.jsp">상품 검색(1)</a></li>
+						<li><a href="<%=root%>/product/productSearch.jsp">상품 검색(2)</a></li>
 					</ul>
 				</li>
+				<%} %>
 				<li>
 					<a href="#">메뉴4</a>
 					<ul>
