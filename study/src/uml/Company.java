@@ -1,7 +1,7 @@
 package uml;
 
 //회사는 다음 구성요소를 가져와야한다. (을 소유해야한다.)
-//판매점 : 회사설립 시 생성
+//판매점 : 회사설립 시 생성.
 //판매직원  : 설립 전부터 존재
 public class Company {
 	private Seller seller;
