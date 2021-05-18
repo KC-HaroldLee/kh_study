@@ -157,6 +157,7 @@ public class MusicDao {
 
 			list.add(musicDto);
 		}
+		return list;
 	}
 	
 	// 메소드07
@@ -165,5 +166,6 @@ public class MusicDao {
 		Class.forName("oracle.jdbc.OracleDriver");
 		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "kh", "kh");
 		String sql = "select * from music";
+		return null;
 	}
 }

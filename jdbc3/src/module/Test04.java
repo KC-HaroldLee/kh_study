@@ -16,7 +16,7 @@ public class Test04 {
 		
 		//계산(데이터베이스 작업)
 		MemberDao memberDao = new MemberDao();
-		memberDao.resist(memberId, memberPw, memberNickname, 
+		memberDao.regist(memberId, memberPw, memberNickname, 
 											memberBirth, memberPhone, memberEmail);
 		
 		

@@ -18,7 +18,7 @@ public class Test07 {
 		//계산(데이터베이스 작업)
 
 		MemberDao memberDao = new MemberDao();
-		memberDao.resist(memberDto);
+		memberDao.regist(memberDto);
 		
 		System.out.println("끝");
 	}
