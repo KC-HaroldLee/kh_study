@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script>     
+            $(document).ready(function(){
+            var $liList = $("ul.menu li");
+
+            $liList.each(function(kk){ //each에는 저런 (안의)매개변수가 필요한가 보다
+                var init = 1+kk*10;
+                console.log(kk + "번째에 " + init + "만큼 적용"); // 몇개인지
+                $(this).css("font-size", init);
+            });
+        });      
+        </script>
+    </head>
+    <body>
+        <ul class="menu">
+            <li data-value="1">하나</li>
+            <li class="select">둘</li>
+            <li data-value="2">셋</li>
+            <li class="test1">야!</li>
+        </ul>
+    </body>
+</html>

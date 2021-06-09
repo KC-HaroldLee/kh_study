@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script>           
+            /*
+                $대상.children() - 자식                
+                $대상.find() - 종자까지 다
+                $대상.contents - 자식이긴한데 텍스트 노드까지 찾아낸다.
+            */
+            $(document).ready(function(){
+                //암튼 잡는다.. 음 그냥 선택하기 애매한경우
+                //그러니까 선택하기 위해서 새로이 클래스 이름을 붙이려는 경우 피할 수 있는 부분 같다.
+                $("#samplePage").children("#header").css("color","red"); 
+            });
+
+            //첫째와 막내
+            $(document).ready(function(){
+                $("ul.menu").children().first().css("color", "red"); //children(":first") 와 같다
+                $("ul.menu").children().last().css("color", "yellow"); //children(":last") 와 같다.
+            })
+
+            //아... 그놈!
+            $(document).ready(function(){
+                $("ul.menu").children().eq(2).css("color", "blue"); //children(":eq(2)")와 같다
+            })
+
+            //저 같은 것들을 아래에 똑같이 해보자. //이게 조금 빠르다고 한다.
+            $(document).ready(function(){
+                $("div.content-data").children(":first").css("color", "red"); //children().first()와 같다.
+                $("div.content-data").children(":last").css("color", "yellow"); //children().last()와 같다.
+                $("div.content-data").children(":eq(1)").css("color", "blue"); //children().eq(1)와 같다.
+            })
+
+            //특히 라스트는 .children().eq($대상.children().length-1)과 같기는 하다.
+        </script>
+    </head>
+    <body>
+       <div id="samplePage" class="page" >
+            샘플 페이지(div, id=samplePage, class=page)
+            <div id="header">               
+                헤더 영역(div, id=header)
+            </div>
+            <div id="content" class="sample-content">
+                노드 찾기(div, id=content, class=sample-content)
+                <ul class="menu">
+                    일반 노드 찾기(ul, class=menu)
+                    <li data-value="1">id로 찾기(li, data-value=1)</li>
+                    <li class="select">tag로 찾기(li, class=select)</li>
+                    <li data-value="2">class로 찾기(li, data-value=2)</li>
+                    <li class="test1">속성으로 찾기(li, class=test1)</li>
+                </ul>
+                <div class="content-data">
+                    자식 노드 찾기(div, class=content-data)
+                    <p class="test1">1. 모든 자식 노드 찾기(p, class=test1)</p>
+                    <p>2. 특정 자식 노드만 찾기(p)</p>
+                    <p class="test2">3. 마지막 자식 노드 찾기(p, class=test2)</p>
+                </div>
+            </div>
+            <div id="footer">               
+                푸터 영역(div, id=footer)
+            </div>      
+        </div>  
+    </body>
+</html>

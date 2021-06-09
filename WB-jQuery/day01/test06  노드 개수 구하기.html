@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script>           
+            //노드 개수 구하기. 어따 쓰는지는 모르겠지만 하하
+            $(document).ready(function(){
+                var $target1 = $(".target1");
+                var $target2 = $(".target2");
+                
+                console.log($target1); //배열 형식으로 나온다. 그러니까
+                console.log($target2); //length든 뭐든 다 된다.
+                console.log("$target1은 " + $target1.length + "개");
+                console.log("$target2은 " + $target2.length + "개");
+
+                //따라서 선택하는 것도 배열처럼한다.
+
+                var $get = $target1.get(2);// get은 에러가 뜬다. getdms 자비스의 DOM에 접근할때 쓴다.
+                var $eq = $target1.eq(3);// element queue를 쓴다.
+                console.log("$get :" + $get);
+                console.log("$eq :" + $eq);
+                $get.style("color", "red"); //css가 먹히지 않아///
+                $eq.css("color", "red");
+            });
+            
+
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li class="target1">안녕</li>
+            <li class="target1">안녕</li>
+            <li class="target1">안녕</li>
+            <li class="target1">안녕</li>
+            <li class="target1">안녕</li>
+            <li class="target2">뭐해?</li>
+            <li class="target2">뭐해?</li>
+            <li class="target2">뭐해?</li>
+        </ul>
+    </body>
+</html>

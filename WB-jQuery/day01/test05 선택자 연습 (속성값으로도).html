@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+            body{
+                font-size:9pt;
+                font-family:"굴림";       
+            }
+            div, p, ul, li{
+                border:1px #eeeeee solid;
+                margin:10px;
+            }
+            ul {
+             padding:10px;
+            }
+            li.select {
+                background-color:#ccc;
+            }
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script>
+        $(document).ready(function(){ //load 말고 ready
+            $("#header").css("border", "1px solid black")
+        });
+
+        // $(document).ready(function(){
+        //     $("[class]").css("color", "red")
+            
+        // });
+
+        /*
+            $("E[A]") - A속성을 포함한 모든 E노드 찾기
+            $("E[A=V]") - A속성이 V인 모든 E노드 찾기
+            $("E[A=^V]") - V로 시작
+            $("E[A=$V]") - V로 끝
+            $("E[A=*V]") - 속성
+
+
+
+        */
+        $(document).ready(function(){
+            $("[class=select]").css("color", "white") //그렇지 따옴표를 쓸 필요는 없지
+            
+        });
+
+        // $(document).ready(function(){
+        //     $("li, [class=test1]").css("color", "red") //이런 놈 저런 놈 둘 다 선택가능
+            
+        // });
+        
+        $(document).ready(function(){
+            $("[class=test1]li").css("color", "red") //이런 놈 이면서 저런놈인건 (붙인다)!
+            
+        });
+        </script>
+    </head>
+    <body>
+        <div id="samplePage" class="page" >
+            샘플 페이지(div, id=samplePage, class=page)
+            <div id="header">               
+                헤더 영역(div, id=header)
+            </div>
+            <div id="content" class="sample-content">
+                노드 찾기(div, id=content, class=sample-content)
+                <ul class="menu">
+                    일반 노드 찾기(ul, class=menu)
+                    <li data-value="1">id로 찾기(li, data-value=1)</li>
+                    <li class="select">tag로 찾기(li, class=select)</li>
+                    <li data-value="2">class로 찾기(li, data-value=2)</li>
+                    <li class="test1">속성으로 찾기(li, class=test1)</li>
+                </ul>
+                <div class="content-data">
+                    자식 노드 찾기(div, class=content-data)
+                    <p class="test1">1. 모든 자식 노드 찾기(p, class=test1)</p>
+                    <p>2. 특정 자식 노드만 찾기(p)</p>
+                    <p class="test2">3. 마지막 자식 노드 찾기(p, class=test2)</p>
+                </div>
+            </div>
+            <div id="footer">               
+                푸터 영역(div, id=footer)
+            </div>      
+        </div>  
+    </body>
+</html>
