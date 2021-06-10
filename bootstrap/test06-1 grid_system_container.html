@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩이 의존하는 css를 가져온다 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+
+    </style>
+
+    <!-- 제이쿼리를 가져온다 -->
+    <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+    <!-- Popper를 가져온다 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- 부트스트랩을 가져온다 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script>
+        
+    </script>
+
+
+</head>
+<body>
+    
+    <!-- 
+        bootstrap은 두 가지 컨테이너를 준비한다.
+        [1].container
+            특정 쪽 구간마다 최적화된 쪽으로 변경되는 컨테이너.
+        [2].container-fluid
+            구간 상관없이 화면 전체를 기준으로 변경되는 컨테이너.
+     -->
+
+    <div class="container">
+        <h1>컨테이너</h1>
+    </div>
+
+    <div class="container-flude">
+        <h1>컨테이너-플루이드</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">컬럼1</div>
+            <div class="col">컬럼2</div>
+            <div class="col">컬럼2</div>
+        </div>
+    </div> 
+</body>
+</html>
