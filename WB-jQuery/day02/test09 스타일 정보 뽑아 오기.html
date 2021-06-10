@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script>
+            $(document).ready(function(){
+                $target = $(".select");
+                $target.css({
+                    fontsize: "12px", //';'이 아니네요 음... 따로 외야겠군
+                    color: "red" //마지막에 쉼표는 없음
+                }); //이건 css버거
+            });
+
+            $(document).ready(function(){
+                $target = $(".select");
+                console.log($target.css("font-size"));
+            })
+        </script>
+    </head>
+    <body>
+        <ul class="menu">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li class="select">menu3</li>
+            <li class="select">menu3-1</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+        </ul>  
+    </body>
+</html>

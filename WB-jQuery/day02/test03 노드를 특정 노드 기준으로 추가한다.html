@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script>
+        /*
+            마치 수동태 변환하듯이 말야...
+            $추가노드.insertAfter($기준노드);
+            $기준노드.after($추가노드); //이게훨씬 나은 느낌...
+
+            before도
+        */   
+
+        $(document).ready(function(){
+            var $list = $("#list>.select");
+            var count = 0;
+            $("#btnAdd1").click(function(){
+                var $newLi = $("<li>여기 있어영~</li>");
+                $list.after($newLi);
+                count++;
+            })
+            $("#btnAdd2").click(function(){
+                var $newLi = $("<li>저기 있어영~</li>");
+                $list.before($newLi); //이것도 되나
+                count++;
+            })
+
+        });
+        </script>
+    </head>
+    <body>
+        <button id="btnAdd1">
+            추가1
+        </button>
+        <button id="btnAdd2">
+            추가2
+        </button>
+
+        <ul id="list">
+            <li>
+                menu1
+            </li>
+            <li>
+                menu2
+            </li>
+            <li class="select">
+                menu3
+            </li>
+            <li>
+                menu4
+            </li>
+            <li>
+                menu5
+            </li>
+            <li>
+                menu6
+            </li>
+        </ul>
+
+    </body>
+</html>

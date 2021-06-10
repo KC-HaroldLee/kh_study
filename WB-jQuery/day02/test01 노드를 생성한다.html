@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script> 
+            $(document).ready(function(){
+                var count = 0;
+                $("#btnAdd").click(function(){
+                //$ newLi = "<li>menu"+count+"</li>"; //이러지말고
+                $newLi = $("<li>menu"+count+"</li>"); //결국 $을 써야한다.
+                var $list = $("#list");
+                //$newLi.appendChild(); //근데 이게 안되는데?
+                $list.append($newLi); //흠 이게 됩니다.. 음...
+
+                //이렇게 해보자. --도 안된다.
+                // var $body = $("body");
+                // $body.appendChild($newLi);
+                // count++;
+                });
+            });
+        </script>
+    </head>
+    <body> 
+        <button id="btnAdd">
+            추가
+        </button>
+
+        <ul id="list">
+            <li>
+                menu1
+            </li>
+            <li>
+                menu2
+            </li>
+            <li class="select">
+                menu3
+            </li>
+            <li>
+                menu4
+            </li>
+            <li>
+                menu5
+            </li>
+            <li>
+                menu6
+            </li>
+        </ul>
+    </body>
+</html>
