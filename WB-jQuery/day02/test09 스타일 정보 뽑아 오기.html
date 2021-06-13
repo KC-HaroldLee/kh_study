@@ -8,6 +8,19 @@
 
         <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
         <script>
+
+
+        /*자비스는 이렇게 했더랬다
+            // 인라인 스타일 접근 방법
+            console.log("1. color =", content.style.color);
+    
+            // 인라인 스타일이 아닌 속성을 접근하는 경우
+            console.log("2. border =", content.style.border); // null;
+    
+            // 내부, 외부 스타일 접근 방법
+            console.log("3. border =", window.getComputedStyle(content).border);
+        */
+
             $(document).ready(function(){
                 $target = $(".select");
                 $target.css({

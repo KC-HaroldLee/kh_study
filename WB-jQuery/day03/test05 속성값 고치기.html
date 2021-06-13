@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <style>
+            body {
+                font-size: 11pt;
+            }
+
+            .header {
+                text-align: center;
+            }
+
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function() {
+                var $target = $("img");
+                $target.attr("src", "https://abcdefghijklmnopqrstuvwwxyz.jpg"); // 흠...
+                console.log($target.data("band"));
+                $target.data("band", "FOOFIGHERS"); //후 빡친다.    
+                console.log($target.data("band"));
+                $target.attr("data-band", "BUSTED");
+                console.log($target.data("band"));
+            })
+            })
+
+        </script>
+
+    </head>
+
+    <body>
+        <button id ="btn">
+            10년뒤
+        </button>
+        <div class="header">
+            <img class="image" src="wdn_logo.png" data-band="NIRVANA">
+            <br>
+            <a href="http://www.webdongne.com">웹동네</a>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script> 
+        $(document).ready(function(){
+            $("#main").click(function(){
+                console.log("메인!");
+            });
+            $("#sub1").click(function(){
+                console.log("서브1");
+            });
+                    
+            $("#sub2").click(function(e){
+                console.log("서브2");
+                e.stopPropagation(); //오케이 이해 완료 근데 어따 쓰지? 그냥 이거 다 붙일거 같은데.
+            });
+        })
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <button id="sub1">서브1</button>
+            <button id="sub2">서브2</button>
+        </div>
+        
+        
+
+
+    </body>
+</html>

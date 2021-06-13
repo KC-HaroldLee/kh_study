@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn-a").on("click", function(){
+                    alert("알러트!");
+                });
+                $("#btn-c").on("click", function(){
+                    $("#btn-a").trigger("click");//클릭한 것 처럼
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <button id="btn-a">알러트!</button>
+        <button id="btn-c">콘솔로그</button>
+    </body>
+</html>
+--*

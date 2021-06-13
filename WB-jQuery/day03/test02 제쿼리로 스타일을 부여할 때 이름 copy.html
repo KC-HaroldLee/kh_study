@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script>
+            /* 자비스 시절
+            window.onload=function(){
+                var target = document.querySelector(".select"); All을 쓴다면... 반복문을 써야할 것이다.
+                target.style.fontSize="5px";
+                target.style.backgroundColor="red";
+            }
+            */
+
+            $(document).ready(function(){
+               var $target = $(".select"); // 자동으로 All
+               // var $target = $(".select").eq(1); // 이렇게 하면 하나
+               $target.css("font-size", "5px");
+            });
+
+        </script>
+    </head>
+    <body>
+        <ul class="menu">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li class="select">menu3</li>
+            <li class="select">menu3-1</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+        </ul>  
+    </body>
+</html>

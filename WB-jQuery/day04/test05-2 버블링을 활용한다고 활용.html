@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>jQuery 사용 준비!</title>
+        <style>
+        </style>
+
+        <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+        <script> 
+        $(document).ready(function() {
+            $("ul").on("click", function(e) {
+                console.log(e.target.tagName);
+                if(e.target.tagName=="LI"){// 그러니까 ul안에 다른 것들도 있을 수도 있으니 이렇게 한다는 건데. $(ul>li하고 뭔 차이지)
+                    console.log("LI가 맞음");
+                }
+            })
+        });
+        </script>
+    </head>
+    <body>
+        <ul class="menu">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+        </ul>        
+    </body>
+</html>
