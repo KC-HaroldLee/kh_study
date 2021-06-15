@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 스프링 전역 설정 파일 -->
+<!-- 
+	사용자 요청과 관계 없이 프로젝트 전반에 적용되어야 하는 설정 또는 도구를 등록하는 파일
+	Spring-Beans : 스프링 객체의 등로겡 관련된 내용을 지원하는 네임스페이스 
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 데이터 베이스 관련 도구 등록
+	1. 데이터베이스 연결 도구
+		(1)DriverManagerDataSource : 일반 연결도구
+		(2)BasicDataSource : DBCP 연결 도구
+	2. 데이터베이스 명령 처리 도구 
+	-->
+		
+		<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+			<property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
+			<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+			<property name="username" value="kh"></property>
+			<property name="password" value="kh"></property>
+		</bean>
+		
+		<bean id="dbcpSource" class="org.apache.commons.dbcp2.BasicDataSource">
+			<property name="maxTotal" value="20"></property>
+			<property name="maxIdle" value="10"></property>
+			<property name="maxWaitMillis" value="3000"></property>
+			
+			<property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
+			<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+			<property name="username" value="kh"></property>
+			<property name="password" value="kh"></property>
+		</bean>
+		
+		<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+			<!-- 주입해야함 DI-->
+			<property name="dataSource" ref="dbcpSource"></property><!-- 이건 제어반전 -->
+		</bean>
+		
+</beans>

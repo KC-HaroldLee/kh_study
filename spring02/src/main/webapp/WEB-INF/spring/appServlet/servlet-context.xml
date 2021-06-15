@@ -18,15 +18,14 @@
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 	
-	<!-- 컨트롤러 등록 
-	스프링에게 도와달라고 요청하는 코드
-	= 유리가 뭘 하는 것이 아니라 스프링에게 이대로 실행해달라고 부탁
-	= 주객전도 = 제어반전(IdC Inversion of Control)
-	= 스프링이 주도적으로 작업을 수행할 수 있도록 설정을 작성
+	<!-- 
+	목표 : 컨트롤러를 자동으로 등록하게
+	컴포넌트 스캐닝을 설정하여 자동으로 탐색한 뒤 등록하도록 처리
+	스캐닝의 기준점이 될 위치를 설정
+	context:component-scan을 쓴다. ... 와우
 	
 	-->
-	<beans:bean name="/" class="com.kh.spring02.MainpageController"></beans:bean>
-	<beans:bean name="/dice" class="com.kh.spring02.DiceController"></beans:bean>
-	<beans:bean name="/plus" class="com.kh.spring02.PlusController"></beans:bean>
+	
+	<context:component-scan base-package="com.kh.spring03"></context:component-scan> 
 	
 </beans:beans>
